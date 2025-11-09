@@ -129,18 +129,17 @@ function renderBoard() {
     cell.textContent = value;
 
     if (value === "X") {
-      cell.style.color = "#ff0055"; 
-      cell.style.textShadow = "0 0 10px #ff0055, 0 0 20px #ff5599";
+      cell.style.color = "#ff33cc"; // Neon Pink for X
+      cell.style.textShadow = "0 0 10px #ff33cc, 0 0 20px #ff66dd";
     } else if (value === "O") {
-      cell.style.color = "#ff8800"; 
+      cell.style.color = "#ff8800"; // Neon Orange for O
       cell.style.textShadow = "0 0 10px #ff8800, 0 0 20px #ffaa33";
     } else {
-      cell.style.color = "#0ff"; 
+      cell.style.color = "#0ff"; // default neon cyan
       cell.style.textShadow = "0 0 10px #0ff, 0 0 20px #0ff";
     }
   });
 }
-
 
 
 
@@ -159,7 +158,10 @@ function showWinner(winner) {
 
 function showDraw() {
   statustext.textContent = "Draw!";
-}
+  document.querySelectorAll(".cell").forEach((cell) => {
+    cell.style.color = "#ff0055"; // Neon red for all cells
+    cell.style.textShadow = "0 0 10px #ff0055, 0 0 20px #ff5599";
+  });}
 
 function highlightWinningLine(result) {
   if (result.type === "row") {
