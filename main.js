@@ -15,8 +15,8 @@ let scorex = parseInt(localStorage.getItem("scorex")) || 0;
 let scoreo = parseInt(localStorage.getItem("scoreo")) || 0;
 
 
-score.textContent = "Player X: " + scorex;
-score2.textContent = "Player O: " + scoreo;
+score.textContent = "Player X : " + scorex;
+score2.textContent = "Player O : " + scoreo;
 
 function handleclick(row, col) {
   if (!gameActive || board[row][col] !== "") return;
